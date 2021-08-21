@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Employee Management System</title>
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+<!-- Compiled and minified JavaScript -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body style="max-width: 960px; margin: 16px auto; padding: 16px">
+	<h3>Add New Employee</h3>
+	<form th:action="@{/saveEmployee}" th:object="${employee}" method="post">
+		<div class="row">
+			<div class="input-field col s6">
+				<input id="first_name" type="text" class="validate"
+					th:field="*{firstName}"> <label for="first_name">First
+					Name</label>
+			</div>
+			<div class="input-field col s6">
+				<input id="last_name" type="text" class="validate"
+					th:field="*{lastName}"> <label for="last_name">Last
+					Name</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s6">
+				<input id="email" type="email" class="validate" th:field="*{email}">
+				<label for="email">Email</label>
+			</div>
+		</div>
+		<button type="submit" class="waves-effect waves-light btn">Add
+			Employee</button>
+	</form>
+	<br>
+	<a th:href="@{/}"
+		class="blue-text">Back</a>
+</body>
+</html>
