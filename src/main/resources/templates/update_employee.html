@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- This is for using Thymeleaf -->
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
@@ -13,6 +14,9 @@
 </head>
 <body style="max-width: 960px; margin: 16px auto; padding: 16px">
 	<h3>Update Employee</h3>
+	<!-- The th:action="@{/saveEmployee}" expression directs the form to POST to the /saveEmployee endpoint.
+		 The th:object="${employee}" expression declares the model object to use for collecting the form data.
+		 The three form fields, expressed with th:field, correspond to the fields in the Employee object. -->
 	<form th:action="@{/saveEmployee}" th:object="${employee}" method="post">
 		<div class="row">
 		<input type="hidden" id="id"
@@ -38,6 +42,7 @@
 			Employee</button>
 	</form>
 	<br>
+	<!-- The link which sends GET request to "/"  -->
 	<a th:href="@{/}"
 		class="blue-text">Back</a>
 </body>

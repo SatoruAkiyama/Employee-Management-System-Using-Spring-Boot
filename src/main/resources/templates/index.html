@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- This is for using Thymeleaf -->
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
@@ -15,6 +16,7 @@
 
 
 	<h3>Employee List</h3>
+	<!-- The link which sends GET request to "/showNewEmployeeForm"  -->
 	<a th:href="@{/showNewEmployeeForm}"
 		class="waves-effect waves-light btn">Add new employee</a>
 	<div align="center" style="margin-top: 20px">
@@ -29,14 +31,23 @@
 			</thead>
 
 			<tbody>
+			<!-- You can acccess model attributes which are added in a Controller(EmployeeController.java) with ${attributeName}.
+				 In this case, it is "${listEmployees}".
+			     To show all employees data in this table, you need to use "th:each" in the thymeleaf template and iterate the employee of listEmployees -->
 				<tr th:each="employee: ${listEmployees}">
 					<td th:text="${employee.firstName}"></td>
 					<td th:text="${employee.lastName}"></td>
 					<td th:text="${employee.email}"></td>
-					<td><a th:href="@{/showFormForUpdate/{id}(id=${employee.id})}"
-						class="waves-effect waves-light btn">Update</a></td>
-					<td><a th:href="@{/delete/{id}(id=${employee.id})}"
-						class="waves-effect waves-light btn red litghten-2">Delete</a></td>
+					<td>
+						<!-- The link which sends GET request to "/showFormForUpdate/{id}" (id is employee.id) -->
+						<a th:href="@{/showFormForUpdate/{id}(id=${employee.id})}"
+							class="waves-effect waves-light btn">Update</a>
+					</td>
+					<td>
+						<!-- The link which sends GET request to "/delete/{id}" (id is employee.id)  -->
+						<a th:href="@{/delete/{id}(id=${employee.id})}"
+							class="waves-effect waves-light btn red litghten-2">Delete</a>
+					</td>
 				</tr>
 			</tbody>
 		</table>

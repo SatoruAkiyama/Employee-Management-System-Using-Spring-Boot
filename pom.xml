@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.satoruakiyama</groupId>
-	<artifactId>employ-management-system</artifactId>
+	<artifactId>employee-management-system</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>employ-management-system</name>
+	<name>employee-management-system</name>
 	<description>Demo project for Spring Boot Web App</description>
 	<properties>
 		<java.version>11</java.version>
