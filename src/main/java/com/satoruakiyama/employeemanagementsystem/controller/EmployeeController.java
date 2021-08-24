@@ -21,7 +21,7 @@ public class EmployeeController {
 
 	//	display list of employees
 	@GetMapping("/")
-	// This means that this method will be excuted when user sends GET Requests to "/"
+	// This means that this method will be executed when user sends GET Requests to "/"
 	// In our case, "http://localhost:8080/"
 	public String viewHomePage(Model model) {
 
@@ -35,7 +35,7 @@ public class EmployeeController {
 
 	//	showNewEmployeeForm
 	@GetMapping("/showNewEmployeeForm")
-	// This means that this method will be excuted when user sends GET Requests to "/showNewEmployeeForm"
+	// This means that this method will be executed when user sends GET Requests to "/showNewEmployeeForm"
 	// In our case,  "http://localhost:8080/showNewEmployeeForm"
 	public String showNewEmployeeForm(Model model) {
 		Employee employee = new Employee();
@@ -50,7 +50,7 @@ public class EmployeeController {
 
 	//	add an employee
 	@PostMapping("/saveEmployee")
-	// This means that this method will be excuted when user sends POST Requests to "/saveEmployee"
+	// This means that this method will be executed when user sends POST Requests to "/saveEmployee"
 	// In our case, "http://localhost:8080/saveEmployee"
 	public String saveEmployee(@ModelAttribute("employee") Employee employee) {
 		//	@ModelAttribute  binds the object called "employee" of request body from the POST request into the employee parameter of the saveEmployee() method.
@@ -63,7 +63,7 @@ public class EmployeeController {
 
 	//	show update form
 	@GetMapping("/showFormForUpdate/{id}")
-	// This means that this method will be excuted when user sends GET Requests to "/showFormForUpdate/{employee's id}"
+	// This means that this method will be executed when user sends GET Requests to "/showFormForUpdate/{employee's id}"
 	// In our case, "http://localhost:8080/showFormForUpdate/{employee's id}"
 	public String showUpdateForm(@PathVariable Long id, Model model) {
 		// @PathVariable binds the {id} which the path of GET request contains into the id parameter of showUpdateForm() method.
@@ -80,7 +80,7 @@ public class EmployeeController {
 
 	//	delete the employee by id
 	@GetMapping("/delete/{id}")
-	// This means that this method will be excuted when user sends GET Requests to "/delete/{employee's id}"
+	// This means that this method will be executed when user sends GET Requests to "/delete/{employee's id}"
 	//	In our case, "http://localhost:8080/delete/{employee's id}"
 	public String deleteEmployeeById(@PathVariable Long id, Model model) {
 		employeeService.deleteEmployeeById(id);
