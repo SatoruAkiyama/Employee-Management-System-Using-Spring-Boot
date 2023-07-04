@@ -20,28 +20,36 @@
 	<form th:action="@{/saveEmployee}" th:object="${employee}" method="post">
 		<div class="row">
 			<div class="input-field col s6">
-				<input id="first_name" type="text" class="validate"
-					th:field="*{firstName}"> <label for="first_name">First
-					Name</label>
+				<input
+					id="first_name"
+					type="text"
+					class="validate"
+					th:field="*{firstName}">
+					<label for="first_name">FirstName</label>
 			</div>
 			<div class="input-field col s6">
-				<input id="last_name" type="text" class="validate"
-					th:field="*{lastName}"> <label for="last_name">Last
-					Name</label>
+				<input
+					id="last_name"
+					type="text"
+					class="validate"
+					th:field="*{lastName}">
+					<label for="last_name">LastName</label>
 			</div>
 		</div>
 		<div class="row">
 			<div class="input-field col s6">
-				<input id="email" type="email" class="validate" th:field="*{email}">
+				<input
+					id="email"
+					type="email"
+					class="validate"
+					th:field="*{email}">
 				<label for="email">Email</label>
 			</div>
 		</div>
-		<button type="submit" class="waves-effect waves-light btn">Add
-			Employee</button>
+		<button type="submit" class="waves-effect waves-light btn">AddEmployee</button>
 	</form>
 	<br>
 	<!-- The link which sends GET request to "/"  -->
-	<a th:href="@{/}"
-		class="blue-text">Back</a>
+	<a th:href="@{/}" class="blue-text">Back</a>
 </body>
 </html>

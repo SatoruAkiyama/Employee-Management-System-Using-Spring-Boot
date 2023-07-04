@@ -1,4 +1,4 @@
-package com.satoruakiyama.employeemanagementsystem.domain;
+package com.satoruakiyama.employeemanagementsystem.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,6 +14,15 @@ public class Employee {
 	private String firstName;
 	private String lastName;
 	private String email;
+	private int age;
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
 
 	public Employee() {
 	}

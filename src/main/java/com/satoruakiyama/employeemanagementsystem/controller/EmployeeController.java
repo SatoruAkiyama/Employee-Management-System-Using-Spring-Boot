@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.satoruakiyama.employeemanagementsystem.domain.Employee;
+import com.satoruakiyama.employeemanagementsystem.model.Employee;
 import com.satoruakiyama.employeemanagementsystem.service.EmployeeService;
 
 @Controller // This means that this class is a Controller
@@ -86,6 +86,13 @@ public class EmployeeController {
 		employeeService.deleteEmployeeById(id);
 
 	//	after delete the employee data from database, redirect to "/"
+		return "redirect:/";
+	}
+	//	create random data
+	@GetMapping("/create")
+	// This means that this method will be executed when user sends GET Requests to "/delete/{employee's id}"
+	public String createDate() {
+		employeeService.createData();
 		return "redirect:/";
 	}
 }
