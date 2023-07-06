@@ -8,8 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.github.javafaker.Faker;
-import com.satoruakiyama.employeemanagementsystem.model.Employee;
-import com.satoruakiyama.employeemanagementsystem.repository.EmployeeRepository;
+import com.example.employeemanagementsystem.model.Employee;
+import com.example.employeemanagementsystem.repository.EmployeeRepository;
 
 @Service // This means that this class is a service
 public class EmployeeService extends Tools{

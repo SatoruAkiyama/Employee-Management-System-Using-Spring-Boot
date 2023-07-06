@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.satoruakiyama.employeemanagementsystem.model.Employee;
-import com.satoruakiyama.employeemanagementsystem.service.EmployeeService;
+import com.example.employeemanagementsystem.model.Employee;
+import com.example.employeemanagementsystem.service.EmployeeService;
 
 @Controller // This means that this class is a Controller
 public class EmployeeController {
