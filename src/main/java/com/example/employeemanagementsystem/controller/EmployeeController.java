@@ -1,4 +1,4 @@
-package com.satoruakiyama.employeemanagementsystem.controller;
+package com.example.employeemanagementsystem.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

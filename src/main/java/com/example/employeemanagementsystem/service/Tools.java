@@ -1,5 +1,5 @@
 
-package com.satoruakiyama.employeemanagementsystem.service;
+package com.example.employeemanagementsystem.service;
 
 import java.util.Locale;
 
