@@ -19,11 +19,11 @@ Employee Management System using Spring Boot, Thymeleaf and MySQL database.
 
 # Details
 
-You can see details of how to make a blog with this code. (https://satoruakiyama.com/blog/building-an-application-with-spring-boot)
+You can see details of how to make a blog with this code. (https://portfolio-satoruakiyama.vercel.app/blog/building-an-application-with-spring-boot)
 
 # Author
 
-Satoru Akiyama(https://satoruakiyama.com)
+Satoru Akiyama(https://portfolio-satoruakiyama.vercel.app)
 
 # License
 
